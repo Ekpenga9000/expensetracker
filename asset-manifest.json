@@ -1,0 +1,15 @@
+{
+  "main.css": "/expensetracker/static/css/main.a9a4733f.chunk.css",
+  "main.js": "/expensetracker/static/js/main.b9acdc0b.chunk.js",
+  "main.js.map": "/expensetracker/static/js/main.b9acdc0b.chunk.js.map",
+  "static/css/1.0ac3d2e0.chunk.css": "/expensetracker/static/css/1.0ac3d2e0.chunk.css",
+  "static/js/1.d7ecf7b5.chunk.js": "/expensetracker/static/js/1.d7ecf7b5.chunk.js",
+  "static/js/1.d7ecf7b5.chunk.js.map": "/expensetracker/static/js/1.d7ecf7b5.chunk.js.map",
+  "runtime~main.js": "/expensetracker/static/js/runtime~main.afefb574.js",
+  "runtime~main.js.map": "/expensetracker/static/js/runtime~main.afefb574.js.map",
+  "static/css/1.0ac3d2e0.chunk.css.map": "/expensetracker/static/css/1.0ac3d2e0.chunk.css.map",
+  "static/css/main.a9a4733f.chunk.css.map": "/expensetracker/static/css/main.a9a4733f.chunk.css.map",
+  "index.html": "/expensetracker/index.html",
+  "precache-manifest.5d8790c9eabbbfd10e72583d8855e611.js": "/expensetracker/precache-manifest.5d8790c9eabbbfd10e72583d8855e611.js",
+  "service-worker.js": "/expensetracker/service-worker.js"
+}
