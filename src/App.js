@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Routes, Route} from 'react-router-dom';
+import Login from './components/Login';
+import Dashboard from './components/Dashboard';
+import tableData from "./components/data/MOCK_DATA";
+import AddEmployee from "./components/forms/AddEmployee";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './stylesheet.css'
 
 function App() {
+  console.log(tableData)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>   
+    <Routes>
+      <Route path='/' element={<Login />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/addemployee' element={<AddEmployee />}/>
+    </Routes>
+    </>
   );
 }
 

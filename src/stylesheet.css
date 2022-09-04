@@ -1,0 +1,277 @@
+/* *{
+    outline: auto;
+} */
+
+body{
+    margin: 0 !important;
+    height: 100% !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-font-smoothing: antialiased !important;
+    
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+.height100{
+    height: 100vh !important;
+}
+#login-container-div{
+    height: 100vh;
+    color: #fff;
+}
+
+.dark-blue-bg{
+    background: hsl(214, 35%, 21%) !important;
+}
+
+.login-input-label{
+    color:#6f93c2 ;
+}
+.login-input[type="text"]{
+    width: 330px !important;
+    background-color: #394b62;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 7px 7px 10px;
+    color: #6f93c2;
+    font-weight: bold;
+    outline: none;
+}
+
+.login-input[type="password"]{
+    width: 280px !important;
+    background-color: #394b62;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    padding: 7px 7px 7px 10px;
+    color: #6f93c2;
+    font-weight: bold;
+    outline: none;  
+    transition: ease-in-out 0.3s;
+}
+
+.login-input[type="text"]:focus, .login-input[type="password"]:focus{
+    background: linear-gradient(90deg,#485e7b,#485e7b)left;
+    background: linear-gradient(90deg,#394b62,#394b62)left;
+    /* background-color:#485e7b; */
+   
+}
+
+#password-reveal-toggle-button{
+    width: 50px !important;
+    background-color: #394b62;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius:0 5px 5px 0;
+    padding: 1px 7px 6px 4px;
+    color: #6f93c2;
+    font-weight: bold;
+    outline: none;
+}
+
+#password-reveal-toggle-button:hover{
+    background-color:#485e7b;
+    color: aliceblue;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+
+
+.height40{
+    height:35vh;
+}
+
+.height60{
+    height:60vh;
+}
+  
+.rule{
+    background-color: #3F8CF1;
+    width: 100%;
+    height: 0.3em;
+    border: none;
+}
+
+.fixed-position{
+    position: absolute !important;
+}
+
+.font-16{
+    font-size: 30px !important;
+}
+
+.overflow{
+    overflow-x: auto !important;
+
+}
+
+.flex-wrap{
+    flex-wrap: nowrap !important;
+}
+#expense-manager{
+    margin-left: -100px;
+}
+
+.button{
+    border: none;
+    color:#fff;
+    background-color: #3F8CF1;
+    border-radius: 5px;
+    width: 120px;
+    padding:10px 30px;
+    font-size: 19px;
+}
+
+.button:hover{
+    background-color: #5596ea;
+}
+
+/* Dashboard Navigation Bar */
+.dashboard-nav-button{
+    /* padding: 0.3em 0.7em 0.1em 0.7em; */
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color:#3F8CF1 ;
+    background-color: #394b62;
+    transition: ease-in-out 0.4s;
+}
+
+.dashboard-nav-button:hover{
+    background-color:#485e7b;
+    color:#3F8CF1 ;
+}
+
+/* The left part of the dashboard */
+
+.ruler-div{
+    margin-bottom: -25px !important;
+    padding: 20px 5px 5px 5px;
+}
+
+#clear-filter-button{
+    border: none;
+    background-color: transparent;
+    color:#3F8CF1;
+    outline: none;
+    padding-bottom: 10px;
+}
+
+/* The Accordion for filtering */
+#accordionTitleAmount{
+    margin-top: -10px !important;
+}
+/* The form for filtering */
+.dashboard-label:focus{
+    color:#3F8CF1 !important;
+}
+
+.dashboard-input{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none !important;
+    font-weight: bold;
+    color:rgba(85, 82, 82, 0.919) ;
+    padding: 5px 10px;
+    background-color:rgba(184, 203, 251, 0.325);
+}
+
+.dashboard-nav-bar{
+    width: 100vw !important;
+    position:sticky;
+    top: 0px;
+}
+
+/* The table */
+.tableContainer{
+    overflow-y: scroll !important;
+}
+
+.stickyposition-top{
+    position: sticky !important;
+    top: 0px;
+    background-color: #fff;
+    z-index: 97;
+}
+
+.stickyposition-left{
+    position:sticky !important;
+    left: 0px;
+    background-color: #fff;
+    z-index: 91;
+}
+
+.dashboard-table {
+    width: 100%;
+  }
+  
+  .dashboard-table td, .dashboard-table th {
+    border-top: 1px solid #ddd;
+    padding: 0px 8px;
+  }
+  
+  .dashboard-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #fff;
+  }
+
+
+/* The sticky button */
+
+#add_ExpenseModal_Button{
+    background-color:transparent;
+    display: inline-block;
+    border: none;
+    color:#FF4238;
+    font-size: 3.2em;
+    bottom: 50em;
+    z-index: 999;   
+}
+
+#dashboard-sticky-body-container{
+    display: flex;
+    justify-content: end;
+    padding-right: 1.2em;
+    position:sticky;
+    bottom: 4em;
+    right: 2em;
+    z-index: 999;
+}
+
+/* Add Expense modal */
+
+#DragAndDropPictureModal{
+    border: 2px dashed rgb(178, 176, 176);
+    background-color: #fff;
+    border-radius: 12px;  
+}
+
+#mainModalContainer{
+    position: absolute;
+    min-height: 70%;
+    width:40%;
+    background-color: #fff;
+    border-radius: 12px;
+    top: 20%;
+    left: 30%;
+    right: 10%;
+    bottom: 15%;
+    z-index: 999;
+    transition: ease-in-out 0.4s;
+}
+
+/* Add Employee */
+
