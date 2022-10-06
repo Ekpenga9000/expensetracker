@@ -1,0 +1,4 @@
+.checkbox-div input[type = checkbox], label{
+    display: inline-block;
+    margin-right: 0.5em;
+}

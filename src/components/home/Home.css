@@ -1,0 +1,45 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.totalDiv{
+    padding: 1em;
+}
+
+.dataDiv{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-divs{
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid rgba(100, 100, 100, 0.1);
+    border-radius: 8px;
+    transition: ease-in-out 0.4s;
+}
+
+.item-divs:hover{
+    box-shadow: 10px 10px 20px 1px rgba(179,179,179,0.68);
+    -webkit-box-shadow: 10px 10px 20px 1px rgba(179,179,179,0.68);
+    -moz-box-shadow: 10px 10px 20px 1px rgba(179,179,179,0.68);
+}
+
+.item-divs h2, .pink{
+    color: #FF75B1;
+}
+
+.item-divs p:nth-child(3){
+    color: #FFA1CF;
+    font-weight: bold;
+}
+
+.calender-Div{
+    display: flex;
+    align-items: center;
+}
+
+.calender-Div span{
+    display: inline-block;
+    margin-right: 0.5em;
+}

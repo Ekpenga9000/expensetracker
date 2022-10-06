@@ -127,11 +127,13 @@ function Dashboard() {
                                         </thead>
                                         <tbody>
                                                 {items.map(tableDataObj => (
-                                                <tr key={tableDataObj.id}><td className="stickyposition-left">{tableDataObj.Date}</td>     
-                                                    <td>{tableDataObj.Merchant}</td>     
-                                                    <td>{tableDataObj.Total}</td>     
-                                                    <td>{tableDataObj.Status}</td>     
-                                                    <td>{tableDataObj.Comment}</td></tr>
+                                                    <tr key={tableDataObj.id}>
+                                                        <td className="stickyposition-left">{tableDataObj.Date}</td>     
+                                                        <td>{tableDataObj.Merchant}</td>     
+                                                        <td>{tableDataObj.Total}</td>     
+                                                        <td>{tableDataObj.Status}</td>     
+                                                        <td>{tableDataObj.Comment}</td>
+                                                    </tr>
                                             ))};  
                                             
                                         </tbody>
