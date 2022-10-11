@@ -9,14 +9,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./stylesheet.css";
 import Checkbox from "./components/checkbox/Checkbox.jsx";
 import status from "./components/data/status";
+import { useMemo } from "react";
 
 function App() {
-  const [data, setData] = useState(tableData);
-  const [value, setValue] = useState([]);
-  const [state, setState] = useState({
-    data: tableData,
-    filters: new Set(),
-  });
+  const data = [...tableData]
+const [filter, setFilter] = useState({})
+  const [query, setQuery] = useState("");
 
   const checkParam = status.map((item) => item.label)
 
@@ -25,73 +23,38 @@ function App() {
 
   const handleChange = (e) => {
     const isChecked = e.target.checked;
-    let hasValue = [];
-    let tableFill;
-
-
-
-    if (isChecked) {
-      hasValue.push(e.target.value);
-    } else {
-      hasValue.pop(e.target.value)
-    }
-
-    if (isChecked) {
-      tableFill = data.filter((item) => item.Status.includes(hasValue));
-      setData(tableFill);
-    } else if (!isChecked) {
-      tableFill = data.filter((item) => item.Status !== hasValue);
-      setData(tableFill);
-    }
-
-    const tableFilter = tableFill.length > 0 ? tableFill : tableData;
-
-    setData(tableFilter);
-
-    console.log(hasValue)
+    setFilter({...filter, [`${e.target.value}`]: isChecked})
   };
 
-  const handleFilterChange = useCallback(
-    (event) => {
-      setState((previousState) => {
-        let filters = new Set(previousState.filters);
-        let data = tableData;
+  console.log(filter);
 
-        if (event.target.checked) {
-          filters.add(event.target.value);
-        } else {
-          filters.delete(event.target.value);
+  const filteredData = useMemo(() => {
+  //filter data by query or filtervalue
+    console.log('firing!!!',)
+    const filterLength = Object.values(filter).filter((value) => !!value).length;
+    if (filterLength) {
+      console.log('firing condition!!!', filter)
+      return data.reduce((prev, current) => {
+        //check if current value status is part of filter
+        if (filter[current.Status]) {
+          prev.push(current)
         }
-
-        if (filters.size) {
-          data = data.filter((item) => {
-            return filters.has(data.status);
-          });
-        }
-
-        return {
-          filters,
-          data,
-        };
-      });
-    },
-    [setState]
-  );
-
-
-  useEffect(() => {
-    // onFilter();
-  }, [value]);
-
+        return prev;
+      }, []);
+    }
+    
+    return data
+  }, [query, filter, data])
+  
   return (
     <>
-      <input type="search" onChange={(e) => setValue(e.target.value)} />
+      <input type="search" onChange={(e) => setQuery(e.target.value)} />
 
       <Checkbox status={status} handleChange={handleChange} />
       <Routes>
         <Route path="/" element={<Login />} />
         <Route
-          path="/dashboard" element={<Home data={data} />}
+          path="/dashboard" element={<Home data={filteredData} />}
         />
         <Route path="/addemployee" element={<AddEmployee />} />
       </Routes>

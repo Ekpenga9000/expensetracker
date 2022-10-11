@@ -4,10 +4,9 @@ import './Home.css';
 
 const Home = ({ data }) => {
     
-    let total = data.map(item => item.Total.substr(1)).reduce((prev, next) => parseFloat(prev) + parseFloat(next));
-        total = total.toFixed()
-    const entries = data.length
-
+    console.log("Lrngth === ", data.length)
+    const total = data.map(item => item.Total.substr(1)).reduce((prev, next) => parseFloat(prev) + parseFloat(next)).toFixed();
+    const entries = data.length;
     return (
         <div>
             <div className='totalDiv'>
